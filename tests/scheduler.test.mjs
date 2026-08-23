@@ -1,0 +1,17 @@
+import assert from"node:assert/strict";
+import{readFile}from"node:fs/promises";
+import{state}from"../js/state.js";
+import{unlockedLessons,newItems,lessonMastered}from"../js/scheduler.js";
+const load=async p=>JSON.parse(await readFile(new URL(`../${p}`,import.meta.url)));
+state.vocabulary=(await load("data/vocabulary.json")).items;
+state.lessons=await load("data/lessons.json");
+state.settings.dailyNew=5;state.progress={v:1,c:{}};
+assert.deepEqual(unlockedLessons().map(x=>x.id),["lesson-001"]);
+assert.deepEqual(newItems().map(x=>x.id),["v0001","v0002","v0003","v0004","v0005"]);
+for(const id of state.lessons[0].items)state.progress.c[id]={s:3,n:3,skills:{meaning:2,production:2,listening:2}};
+assert(lessonMastered(state.lessons[0]));
+assert.deepEqual(unlockedLessons().map(x=>x.id),["lesson-001","lesson-002"]);
+assert.equal(newItems()[0].id,"v0011");
+state.progress.c.v0011={s:5,n:5};
+assert.equal(newItems()[0].id,"v0012","Bestehende alte Fortschrittsdaten müssen berücksichtigt werden");
+console.log("OK: Lektionsfreigabe und neue Wörter validiert.");

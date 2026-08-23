@@ -23,7 +23,14 @@ Tests benötigen lediglich Node.js:
 ```bash
 node tests/validate-data.mjs
 node tests/progress.test.mjs
+node tests/scheduler.test.mjs
 ```
+
+## Lernkonzept
+
+Neue Wörter werden zunächst in einem verständlichen Beispiel eingeführt und danach in derselben Sitzung aktiv abgerufen. Fehlerhafte Karten erscheinen nach einigen anderen Aufgaben erneut. Die Wiederholung trainiert getrennt Bedeutung, aktiven Abruf, Hörverstehen, Töne, Satzgebrauch und Schreiben. Erst mehrfach bestätigte Kompetenzen schalten die nächste Lektion frei.
+
+Pinyin dient als einstellbares Gerüst und wird auf Wunsch mit wachsender Sicherheit ausgeblendet. Unbekannte Wörter in Beispielsätzen besitzen direkt zugängliche Kurzglossen. Die Aussprache stammt aus der lokalen chinesischen Systemstimme; die App kennzeichnet sie ausdrücklich als synthetisch.
 
 ## Aufbau
 
