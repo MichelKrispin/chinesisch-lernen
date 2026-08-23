@@ -3,5 +3,5 @@
 @media(max-width:760px){main{margin-top:1rem}.icon-button{display:block}nav{display:none;position:absolute;top:64px;left:0;right:0;background:var(--surface);padding:.5rem 1rem;border-bottom:1px solid var(--border);flex-direction:column}nav.open{display:flex}.hero,.writing-layout{grid-template-columns:1fr}.answer-grid{grid-template-columns:1fr}.vocab-row{grid-template-columns:4rem 1fr auto}.vocab-row .de{grid-column:2}.panel,.card{padding:1rem}.actions>*{flex:1}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important;animation-duration:.01ms!important}}
 .writing-layout{grid-template-columns:minmax(280px,500px) minmax(0,1fr);align-items:start}.writing-layout>.panel{min-width:0}.writer-box{width:100%}.tabs{flex-wrap:wrap}
-@media(min-width:761px) and (max-width:980px){.writing-layout{grid-template-columns:minmax(280px,42vw) minmax(0,1fr)}.writing-layout .actions>*{width:100%}}
-@media(max-width:760px){.writing-layout{grid-template-columns:minmax(0,1fr)}.writing-layout .actions{flex-direction:column}.tabs button{flex:1 1 auto}}
+@media(min-width:821px) and (max-width:980px){.writing-layout{grid-template-columns:minmax(280px,42vw) minmax(0,1fr)}.writing-layout .actions>*{width:100%}}
+@media(max-width:820px){.writing-layout{grid-template-columns:minmax(0,1fr)}.writing-layout .actions{flex-direction:column}.tabs button{flex:1 1 auto}}
