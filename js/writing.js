@@ -1,0 +1,5 @@
+let writer;
+export function destroy(){writer=null;document.querySelector(".writer-target")?.replaceChildren()}
+export function create(el,char,mode,events={}){destroy();if(!window.HanziWriter)throw Error("Schreibmodul nicht verfügbar");const size=Math.min(el.clientWidth||400,500);writer=HanziWriter.create(el,char,{width:size,height:size,padding:12,showOutline:mode!=="memory",showCharacter:mode==="watch",strokeAnimationSpeed:1,delayBetweenStrokes:250,charDataLoader:(c,onComplete,onError)=>fetch(`character-data/${encodeURIComponent(c)}.json`).then(r=>{if(!r.ok)throw Error();return r.json()}).then(onComplete).catch(onError)});if(mode==="watch")writer.animateCharacter({onComplete:events.complete});else writer.quiz({showHintAfterMisses:stateHint(),highlightOnComplete:true,onMistake:events.mistake,onCorrectStroke:events.stroke,onComplete:events.complete});return writer}
+function stateHint(){return 2}
+export const animate=()=>writer?.animateCharacter();export const hint=()=>writer?.quiz?.highlightStroke?.();
