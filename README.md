@@ -28,7 +28,9 @@ node tests/scheduler.test.mjs
 
 ## Lernkonzept
 
-Neue Wörter werden zunächst in einem verständlichen Beispiel eingeführt und danach in derselben Sitzung aktiv abgerufen. Fehlerhafte Karten erscheinen nach einigen anderen Aufgaben erneut. Die Wiederholung trainiert getrennt Bedeutung, aktiven Abruf, Hörverstehen, Töne, Satzgebrauch und Schreiben. Erst mehrfach bestätigte Kompetenzen schalten die nächste Lektion frei.
+Neue Wörter werden zunächst in einem verständlichen Beispiel eingeführt und danach in derselben Sitzung aktiv abgerufen. Fehlerhafte Karten erscheinen nach einigen anderen Aufgaben erneut. Die Wiederholung trainiert getrennt Bedeutung, aktiven Abruf, Hörverstehen, lexikalische Töne, Satztransfer, Aussprache und optionales Schreiben. Eine Lektion gilt erst nach erfolgreichen Abrufen an mindestens zwei Tagen und einer freien Can-do-Aufgabe als gemeistert.
+
+Der Kurs führt zuerst verwendbare Bausteine und Satzmuster ein. Regelmäßige Formen wie Zahlen über zehn werden aus diesen Bausteinen erzeugt statt als isolierte Wortkarten auswendig gelernt. Auswahlaufgaben dienen vor allem dem Hören; produktive Aufgaben verlangen eine selbst formulierte Antwort.
 
 Pinyin dient als einstellbares Gerüst und wird auf Wunsch mit wachsender Sicherheit ausgeblendet. Unbekannte Wörter in Beispielsätzen besitzen direkt zugängliche Kurzglossen. Die Aussprache stammt aus der lokalen chinesischen Systemstimme; die App kennzeichnet sie ausdrücklich als synthetisch.
 

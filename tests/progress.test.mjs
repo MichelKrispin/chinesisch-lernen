@@ -1,8 +1,10 @@
-import assert from"node:assert/strict";import{state}from"../js/state.js";import{card,validate,mastery,summary}from"../js/progress.js";
-assert.deepEqual(card("v0001").skills,{meaning:0,production:0,listening:0,pronunciation:0,writing:0});
+import assert from"node:assert/strict";import{state}from"../js/state.js";import{card,validate,mastery,summary,retainedSkill}from"../js/progress.js";
+assert.deepEqual(card("v0001").skills,{meaning:0,production:0,listening:0,sentence:0,pronunciation:0,writing:0});
 assert.equal(validate({schemaVersion:1,progress:{v:1,c:{v0001:{s:2}}}}).progress.c.v0001.s,2);
-assert.equal(mastery({s:5,skills:{meaning:4,production:3,listening:2,writing:0}}),2);
+assert.equal(mastery({s:5,n:5,skills:{meaning:4,production:3,listening:2,writing:0}}),2);
 assert.equal(card("v0001").seen,0);
+assert.equal(retainedSkill({s:2,n:2,skills:{meaning:2},skillDays:{meaning:[10]}},"meaning"),1,"Erfolge am selben Tag sind noch nicht gefestigt");
+assert.equal(retainedSkill({s:2,n:2,skills:{meaning:2},skillDays:{meaning:[10,11]}},"meaning"),2,"Abruf an zwei Tagen zählt als gefestigt");
 assert.throws(()=>validate({schemaVersion:1,progress:{v:1,c:{bad:{s:2}}}}));
 assert.throws(()=>validate({schemaVersion:1,progress:{v:1,c:{v0001:{s:2,skills:{meaning:10}}}}}));
 state.progress={v:1,c:{v0001:{s:3,n:3,d:999999}}};assert.equal(summary().learned,1,"Alter Fortschritt muss als Kompetenzstand migriert werden");

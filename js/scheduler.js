@@ -2,7 +2,8 @@ import{state}from"./state.js";import{card,update}from"./progress.js";
 const day=()=>Math.floor(Date.now()/864e5),steps=[1,2,4,7,14,30,60,120];
 export const dueItems=()=>state.vocabulary.filter(v=>card(v.id).n&&card(v.id).d<=day());
 export function unlockedLessons(){const out=[];for(const lesson of state.lessons){if(lesson.unlockAfter&&!lessonMastered(state.lessons.find(x=>x.id===lesson.unlockAfter)))break;out.push(lesson)}return out}
-export function lessonMastered(lesson){return !!lesson&&lesson.items.every(id=>{const c=card(id);return Math.min(c.skills.meaning,c.skills.production,c.skills.listening)>=2})}
+export function lessonReady(lesson){return !!lesson&&lesson.items.every(id=>card(id).skills.meaning>=2&&card(id).skills.production>=2&&card(id).skills.listening>=2&&card(id).skillDays.meaning.length>=2&&card(id).skillDays.production.length>=2&&card(id).skillDays.listening.length>=2)}
+export function lessonMastered(lesson){return lessonReady(lesson)&&state.progress.lessons?.[lesson.id]?.passed===true}
 export const currentLesson=()=>unlockedLessons().find(x=>!lessonMastered(x))||unlockedLessons().at(-1);
 export const newItems=()=>{const allowed=new Set(unlockedLessons().flatMap(x=>x.items));return state.vocabulary.filter(v=>allowed.has(v.id)&&!card(v.id).seen&&!card(v.id).n).slice(0,state.settings.dailyNew)};
 export function rate(id,rating){const c=card(id),success=rating!=="again";let s=Math.max(0,Math.min(9,c.s+(rating==="easy"?2:rating==="good"?1:rating==="again"?-1:0)));let idx=rating==="again"?0:Math.min(steps.length-1,Math.max(0,c.i)+(rating==="easy"?2:rating==="good"?1:0));const days=rating==="again"?0:rating==="hard"?1:steps[idx];update(id,{s,n:c.n+(success?1:0),f:c.f+(success?0:1),i:idx,d:day()+days,l:day()});return card(id)}

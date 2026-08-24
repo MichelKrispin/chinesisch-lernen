@@ -1,1 +1,143 @@
-[{"id":"lesson-001","title":"Sich vorstellen","objective":"Personen benennen, sich begrüßen und einfache Aussagen mit 是, 不 und 有 verstehen.","canDo":"Ich kann mich und andere in sehr einfachen Aussagen erkennen.","items":["v0001","v0002","v0003","v0004","v0005","v0006","v0007","v0008","v0009","v0010"],"unlockAfter":null},{"id":"lesson-002","title":"Grüßen, fragen und zählen","objective":"Höflich grüßen, nach Personen oder Dingen fragen und von eins bis zehn zählen.","canDo":"Ich kann grüßen, einfache W-Fragen erkennen und kleine Mengen ausdrücken.","items":["v0011","v0012","v0013","v0014","v0015","v0016","v0017","v0018","v0019","v0020"],"unlockAfter":"lesson-001"},{"id":"lesson-003","title":"Kurze Gespräche","objective":"Bekannte Wörter zu nützlichen Fragen und Antworten verbinden und größere Zahlen bilden.","canDo":"Ich kann nach Identität und Vorhandensein fragen und kurze Antworten bilden.","items":["v0021","v0022","v0023","v0024","v0025","v0026","v0027","v0028","v0029","v0030","v0031","v0032","v0033","v0034","v0035"],"unlockAfter":"lesson-002"}]
+[
+  {
+    "id": "lesson-001",
+    "title": "Personen und Identität",
+    "objective": "Personen benennen und mit 是 einfache Identitätsaussagen bilden oder verneinen.",
+    "canDo": "Ich kann sagen, wer ich oder eine andere Person ist.",
+    "items": [
+      "v0001",
+      "v0002",
+      "v0003",
+      "v0004",
+      "v0005",
+      "v0006",
+      "v0008",
+      "v0021",
+      "v0022",
+      "v0027",
+      "v0034"
+    ],
+    "unlockAfter": null,
+    "check": {
+      "prompt": "Vervollständige auf Chinesisch: Ich bin Schüler/Schülerin.",
+      "accepted": [
+        "我是学生",
+        "我是學生",
+        "wo3 shi4 xue2sheng5",
+        "wǒ shì xuésheng"
+      ],
+      "model": "我是学生。",
+      "pinyin": "Wǒ shì xuésheng.",
+      "explanation": "Setze die Person vor 是 und die Identität danach."
+    }
+  },
+  {
+    "id": "lesson-002",
+    "title": "Grüßen und reagieren",
+    "objective": "Begrüßen, danken, verabschieden und eine einfache Befindlichkeit erfragen.",
+    "canDo": "Ich kann einen sehr kurzen höflichen Austausch führen.",
+    "items": [
+      "v0009",
+      "v0010",
+      "v0011",
+      "v0012",
+      "v0023",
+      "v0035"
+    ],
+    "unlockAfter": "lesson-001",
+    "check": {
+      "prompt": "Antworte passend auf 你好吗？",
+      "accepted": [
+        "我很好",
+        "wo3 hen3 hao3",
+        "wǒ hěn hǎo"
+      ],
+      "model": "我很好。",
+      "pinyin": "Wǒ hěn hǎo.",
+      "explanation": "Eine kurze passende Antwort nennt zuerst die Person und dann ihre Befindlichkeit."
+    }
+  },
+  {
+    "id": "lesson-003",
+    "title": "Fragen und antworten",
+    "objective": "Mit 谁, 什么 und 吗 nach Personen, Dingen und Ja-Nein-Informationen fragen.",
+    "canDo": "Ich kann eine einfache Frage verstehen und passend beantworten.",
+    "items": [
+      "v0013",
+      "v0014",
+      "v0024"
+    ],
+    "unlockAfter": "lesson-002",
+    "check": {
+      "prompt": "Frage auf Chinesisch: Wer bist du?",
+      "accepted": [
+        "你是谁",
+        "你是誰",
+        "ni3 shi4 shei2",
+        "nǐ shì shéi",
+        "ni3 shi4 shui2",
+        "nǐ shì shuí"
+      ],
+      "model": "你是谁？",
+      "pinyin": "Nǐ shì shéi?",
+      "explanation": "Das Fragewort 谁 bleibt an der Stelle der gesuchten Person."
+    }
+  },
+  {
+    "id": "lesson-004",
+    "title": "Haben und Vorhandensein",
+    "objective": "Mit 有 und 没有 Besitz oder Vorhandensein ausdrücken und nach Dingen fragen.",
+    "canDo": "Ich kann sagen und fragen, ob etwas vorhanden ist.",
+    "items": [
+      "v0007",
+      "v0025",
+      "v0026",
+      "v0028"
+    ],
+    "unlockAfter": "lesson-003",
+    "check": {
+      "prompt": "Frage auf Chinesisch: Hast du Tee?",
+      "accepted": [
+        "你有茶吗",
+        "你有茶嗎",
+        "ni3 you3 cha2 ma5",
+        "nǐ yǒu chá ma"
+      ],
+      "model": "你有茶吗？",
+      "pinyin": "Nǐ yǒu chá ma?",
+      "explanation": "有 steht zwischen Besitzer und Besitz; 吗 macht die Aussage zur Ja-Nein-Frage."
+    }
+  },
+  {
+    "id": "lesson-005",
+    "title": "Zahlen von eins bis zehn",
+    "objective": "Von eins bis zehn zählen und kleine Mengen mit 个 ausdrücken.",
+    "canDo": "Ich kann von eins bis zehn zählen und eine kleine Anzahl Personen nennen.",
+    "items": [
+      "v0015",
+      "v0016",
+      "v0017",
+      "v0018",
+      "v0019",
+      "v0020",
+      "v0029",
+      "v0030",
+      "v0031",
+      "v0032",
+      "v0033"
+    ],
+    "unlockAfter": "lesson-004",
+    "check": {
+      "prompt": "Schreibe auf Chinesisch: neun Personen.",
+      "accepted": [
+        "九个人",
+        "九個人",
+        "jiu3 ge5 ren2",
+        "jiǔ ge rén"
+      ],
+      "model": "九个人",
+      "pinyin": "jiǔ ge rén",
+      "explanation": "Zwischen Zahl und Person steht das Zähleinheitswort 个."
+    }
+  }
+]
