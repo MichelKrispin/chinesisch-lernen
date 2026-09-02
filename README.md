@@ -34,6 +34,8 @@ Der Kurs führt zuerst verwendbare Bausteine und Satzmuster ein. Regelmäßige F
 
 Pinyin dient als einstellbares Gerüst und wird auf Wunsch mit wachsender Sicherheit ausgeblendet. Unbekannte Wörter in Beispielsätzen besitzen direkt zugängliche Kurzglossen. Die Aussprache stammt aus der lokalen chinesischen Systemstimme; die App kennzeichnet sie ausdrücklich als synthetisch.
 
+Die Aussprache setzt eine chinesische Systemstimme voraus und spricht niemals mit einer fremdsprachigen Ersatzstimme. Mobilgeräte bringen sie mit; auf dem Desktop muss sie vorhanden sein. Unter Linux beziehen Chrome und Firefox ihre Stimmen über `speech-dispatcher` (z. B. mit `espeak-ng`, das Mandarin als `cmn` anbietet) - fehlt das Paket, kennen die Browser gar keine Stimme und die Einstellungen weisen darauf hin.
+
 ## Aufbau
 
 - `data/`: versionierter Wortschatz, Zeichen-Metadaten und Lektionen
