@@ -1,7 +1,7 @@
 import assert from"node:assert/strict";
 import{readFile}from"node:fs/promises";
 import{state}from"../js/state.js";
-import{unlockedLessons,newItems,lessonMastered,lessonReady}from"../js/scheduler.js";
+import{unlockedLessons,newItems,practiceItems,sessionItems,lessonMastered,lessonReady}from"../js/scheduler.js";
 const load=async p=>JSON.parse(await readFile(new URL(`../${p}`,import.meta.url)));
 state.vocabulary=(await load("data/course.json")).items;
 state.lessons=await load("data/lessons.json");
@@ -15,4 +15,9 @@ assert.deepEqual(unlockedLessons().map(x=>x.id),["lesson-001","lesson-002"]);
 assert.equal(newItems()[0].id,"v0009");
 state.progress.c.v0009={s:5,n:5};
 assert.equal(newItems()[0].id,"v0010","Bestehende alte Fortschrittsdaten müssen berücksichtigt werden");
+for(const id of state.lessons[1].items)state.progress.c[id]={s:3,n:3,seen:1,l:2,d:99,skills:{meaning:2,production:2,listening:2},skillDays:{meaning:[1,2],production:[1,2],listening:[1,2]}};
+assert(practiceItems().length>0,"Bereits gelernte Karten müssen frei übbar bleiben");
+assert.deepEqual(sessionItems("practice"),practiceItems());
+for(const c of Object.values(state.progress.c))c.d=999999999;
+assert.deepEqual(sessionItems("learn"),practiceItems(),"Weiterlernen darf bei leerem Tagesplan nicht enden");
 console.log("OK: Lektionsfreigabe und neue Wörter validiert.");
