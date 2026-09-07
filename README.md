@@ -28,7 +28,9 @@ node tests/scheduler.test.mjs
 
 ## Lernkonzept
 
-Neue Wörter werden zunächst in einem verständlichen Beispiel eingeführt und danach in derselben Sitzung aktiv abgerufen. Fehlerhafte Karten erscheinen nach einigen anderen Aufgaben erneut. Die Wiederholung trainiert getrennt Bedeutung, aktiven Abruf, Hörverstehen, lexikalische Töne, Satztransfer, Aussprache und optionales Schreiben. Eine Lektion gilt erst nach erfolgreichen Abrufen an mindestens zwei Tagen und einer freien Can-do-Aufgabe als gemeistert.
+Neue Wörter werden zunächst in einem verständlichen Beispiel eingeführt und danach in derselben Sitzung aktiv abgerufen. Fehlerhafte Karten erscheinen nach einigen anderen Aufgaben höchstens zweimal erneut und werden für morgen eingeplant. Die Wiederholung trainiert getrennt Bedeutung, aktiven Abruf, Hörverstehen, lexikalische Töne, Satztransfer, Aussprache und optionales Schreiben. Eine Lektion gilt erst nach erfolgreichen Abrufen an mindestens zwei Tagen und einer freien Can-do-Aufgabe als gemeistert.
+
+Die Einstellung für neue Wörter bestimmt die Portionsgröße, kein Tageslimit. Alle Lektionen sind zugänglich; neue Wörter folgen der Kursreihenfolge. Nach jeder Sitzung sind weitere neue Wörter oder freies Üben möglich. Wiederholungen richten sich nach lokalen Kalendertagen: der erste erfolgreiche Abruf wird morgen wiederholt, spätere fällige Erfolge nach 2, 4, 7, 14, 30, 60 und 120 Tagen. Üben vor dem Termin oder mehrfach am selben Tag verlängert diese Abstände nicht. Unterbrochene Einführungen bleiben fällig.
 
 Der Kurs führt zuerst verwendbare Bausteine und Satzmuster ein. Regelmäßige Formen wie Zahlen über zehn werden aus diesen Bausteinen erzeugt statt als isolierte Wortkarten auswendig gelernt. Auswahlaufgaben dienen vor allem dem Hören; produktive Aufgaben verlangen eine selbst formulierte Antwort.
 
