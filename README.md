@@ -22,6 +22,7 @@ Tests benötigen lediglich Node.js:
 
 ```bash
 node tests/validate-data.mjs
+node tests/examples.test.mjs
 node tests/progress.test.mjs
 node tests/scheduler.test.mjs
 node tests/writing.test.mjs
