@@ -9,6 +9,10 @@ Die lernorientierten Kurzdefinitionen dieses Projekts wurden neu formuliert. Sch
 
 Änderungen: Bedeutungen wurden auf lernrelevante deutsche Kernaussagen gekürzt, Hinweise und Beispielsätze wurden für diese App formuliert. Der abgeleitete Wortschatz ist unter CC BY-SA 4.0 weiterzugeben.
 
+## Pinyin-Aussprachehilfe
+
+Die Erklärungen wurden für diese App formuliert. Als Referenz dienten die [ChinesePod-Ausspracheabschnitte](https://www.chinesepod.com/tools/pronunciation/section/13) und die [Erklärung zur ü-Schreibweise](https://www.chinesepod.com/lesson/pinyin-section-16). Die hörbaren Beispiele sind synthetisierte Systemsprachausgabe, keine Audiodateien von ChinesePod.
+
 ## Hanzi Writer
 
 Hanzi Writer 3.7.3, Copyright © 2014 David Chanin, ist unter der MIT-Lizenz veröffentlicht. Der vollständige Lizenztext befindet sich im Quellprojekt: https://github.com/chanind/hanzi-writer/blob/master/LICENSE

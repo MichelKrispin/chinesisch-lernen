@@ -139,5 +139,167 @@
       "pinyin": "jiǔ ge rén",
       "explanation": "Zwischen Zahl und Person steht das Zähleinheitswort 个."
     }
+  },
+  {
+    "id": "lesson-006",
+    "title": "Menschen und Besitz",
+    "objective": "Mit Pronomen, Namen und 的 über Familie und Freunde sprechen.",
+    "canDo": "Ich kann mich und andere Personen vorstellen.",
+    "items": [
+      "v0036",
+      "v0037",
+      "v0038",
+      "v0039",
+      "v0040",
+      "v0041",
+      "v0042",
+      "v0043",
+      "v0044",
+      "v0045",
+      "v0046"
+    ],
+    "unlockAfter": "lesson-005",
+    "check": {
+      "prompt": "Schreibe auf Chinesisch: Er ist mein Freund.",
+      "accepted": [
+        "他是我的朋友",
+        "ta1 shi4 wo3 de5 peng2you5",
+        "tā shì wǒ de péngyou"
+      ],
+      "model": "他是我的朋友。",
+      "pinyin": "Tā shì wǒ de péngyou.",
+      "explanation": "的 verbindet 我 mit 朋友."
+    }
+  },
+  {
+    "id": "lesson-007",
+    "title": "Essen und Trinken",
+    "objective": "Einfache Speisen und Getränke benennen und Vorlieben ausdrücken.",
+    "canDo": "Ich kann sagen, was ich essen oder trinken möchte.",
+    "items": [
+      "v0047",
+      "v0048",
+      "v0049",
+      "v0050",
+      "v0051",
+      "v0052",
+      "v0053",
+      "v0054",
+      "v0055",
+      "v0056",
+      "v0057"
+    ],
+    "unlockAfter": "lesson-006",
+    "check": {
+      "prompt": "Schreibe auf Chinesisch: Ich mag Tee.",
+      "accepted": [
+        "我喜欢茶",
+        "我喜歡茶",
+        "wo3 xi3huan5 cha2",
+        "wǒ xǐhuan chá"
+      ],
+      "model": "我喜欢茶。",
+      "pinyin": "Wǒ xǐhuan chá.",
+      "explanation": "喜欢 steht vor dem, was man mag."
+    }
+  },
+  {
+    "id": "lesson-008",
+    "title": "Lernen und Alltag",
+    "objective": "Über Lesen, Schreiben, Sprechen und andere Tätigkeiten sprechen.",
+    "canDo": "Ich kann einfache Tätigkeiten und Fähigkeiten nennen.",
+    "items": [
+      "v0058",
+      "v0059",
+      "v0060",
+      "v0061",
+      "v0062",
+      "v0063",
+      "v0064",
+      "v0065",
+      "v0066",
+      "v0067",
+      "v0068",
+      "v0069",
+      "v0070"
+    ],
+    "unlockAfter": "lesson-007",
+    "check": {
+      "prompt": "Schreibe auf Chinesisch: Ich kann Chinesisch sprechen.",
+      "accepted": [
+        "我会说中文",
+        "我會說中文",
+        "wo3 hui4 shuo1 zhong1wen2",
+        "wǒ huì shuō zhōngwén"
+      ],
+      "model": "我会说中文。",
+      "pinyin": "Wǒ huì shuō Zhōngwén.",
+      "explanation": "会 nennt eine erlernte Fähigkeit."
+    }
+  },
+  {
+    "id": "lesson-009",
+    "title": "Orte und Zeit",
+    "objective": "Sagen, wo jemand ist und wann etwas geschieht.",
+    "canDo": "Ich kann einen einfachen Plan für morgen nennen.",
+    "items": [
+      "v0071",
+      "v0072",
+      "v0073",
+      "v0074",
+      "v0075",
+      "v0076",
+      "v0077",
+      "v0078",
+      "v0079",
+      "v0080",
+      "v0081",
+      "v0082"
+    ],
+    "unlockAfter": "lesson-008",
+    "check": {
+      "prompt": "Schreibe auf Chinesisch: Morgen gehe ich zur Schule.",
+      "accepted": [
+        "明天我去学校",
+        "明天我去學校",
+        "ming2tian1 wo3 qu4 xue2xiao4",
+        "míngtiān wǒ qù xuéxiào"
+      ],
+      "model": "明天我去学校。",
+      "pinyin": "Míngtiān wǒ qù xuéxiào.",
+      "explanation": "Die Zeitangabe kann vor dem Subjekt stehen."
+    }
+  },
+  {
+    "id": "lesson-010",
+    "title": "Höflich fragen und einkaufen",
+    "objective": "Um Erlaubnis bitten, sich entschuldigen und einfache Preise erfragen.",
+    "canDo": "Ich kann nach einem Preis fragen.",
+    "items": [
+      "v0083",
+      "v0084",
+      "v0085",
+      "v0086",
+      "v0087",
+      "v0088",
+      "v0089",
+      "v0090",
+      "v0091",
+      "v0092",
+      "v0093"
+    ],
+    "unlockAfter": "lesson-009",
+    "check": {
+      "prompt": "Frage auf Chinesisch: Wie viel kostet das?",
+      "accepted": [
+        "这个多少钱",
+        "這個多少錢",
+        "zhe4 ge5 duo1shao5 qian2",
+        "zhè ge duōshao qián"
+      ],
+      "model": "这个多少钱？",
+      "pinyin": "Zhè ge duōshao qián?",
+      "explanation": "这个 bezeichnet den Gegenstand; 多少钱 fragt nach dem Preis."
+    }
   }
 ]
