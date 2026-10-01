@@ -31,7 +31,7 @@ node tests/writing-page.test.mjs
 
 ## Lernkonzept
 
-Der Kurs enthält derzeit 93 Vokabeln in zehn Lektionen. Eine eigene Seite „Pinyin & Aussprache“ erklärt Anlaute, Auslaute, Töne und wichtige Schreibregeln mit hörbaren chinesischen Beispielen. Bei Satzaufgaben spricht die Schaltfläche in der Auflösung den vollständigen Beispielsatz; bei aktivierter automatischer Aussprache wird er nach der Antwort vorgelesen.
+Der Kurs enthält derzeit 161 Vokabeln in 16 Lektionen. Eine eigene Seite „Pinyin & Aussprache“ erklärt Anlaute, Auslaute, Töne und wichtige Schreibregeln mit hörbaren chinesischen Beispielen. Bei Satzaufgaben spricht die Schaltfläche in der Auflösung den vollständigen Beispielsatz; bei aktivierter automatischer Aussprache wird er nach der Antwort vorgelesen.
 
 Neue Wörter werden zunächst in einem verständlichen Beispiel eingeführt und danach in derselben Sitzung aktiv abgerufen. Fehlerhafte Karten erscheinen nach einigen anderen Aufgaben höchstens zweimal erneut und werden für morgen eingeplant. Die Wiederholung trainiert getrennt Bedeutung, aktiven Abruf, Hörverstehen, lexikalische Töne, Satztransfer, Aussprache und optionales Schreiben. Eine Lektion gilt erst nach erfolgreichen Abrufen an mindestens zwei Tagen und einer freien Can-do-Aufgabe als gemeistert.
 

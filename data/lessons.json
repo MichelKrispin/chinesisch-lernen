@@ -301,5 +301,196 @@
       "pinyin": "Zhè ge duōshao qián?",
       "explanation": "这个 bezeichnet den Gegenstand; 多少钱 fragt nach dem Preis."
     }
+  },
+  {
+    "id": "lesson-011",
+    "title": "Woche und Uhrzeit",
+    "objective": "Monate, Wochentage und einfache Uhrzeiten nennen.",
+    "canDo": "Ich kann sagen, wie spät es ist.",
+    "items": [
+      "v0094",
+      "v0095",
+      "v0096",
+      "v0097",
+      "v0098",
+      "v0099",
+      "v0100",
+      "v0101",
+      "v0102",
+      "v0103"
+    ],
+    "unlockAfter": "lesson-010",
+    "check": {
+      "prompt": "Schreibe auf Chinesisch: Es ist jetzt zehn Uhr.",
+      "accepted": [
+        "现在是十点",
+        "現在是十點",
+        "xian4zai4 shi4 shi2 dian3",
+        "xiànzài shì shí diǎn"
+      ],
+      "model": "现在是十点。",
+      "pinyin": "Xiànzài shì shí diǎn.",
+      "explanation": "Nach der Zahl der Stunden steht 点."
+    }
+  },
+  {
+    "id": "lesson-012",
+    "title": "Tagesablauf",
+    "objective": "Über Aufstehen, Schlafen, Bewegung und Pausen sprechen.",
+    "canDo": "Ich kann meinen Tagesablauf in einfachen Sätzen beschreiben.",
+    "items": [
+      "v0104",
+      "v0105",
+      "v0106",
+      "v0107",
+      "v0108",
+      "v0109",
+      "v0110",
+      "v0111",
+      "v0112",
+      "v0113"
+    ],
+    "unlockAfter": "lesson-011",
+    "check": {
+      "prompt": "Schreibe auf Chinesisch: Ich ruhe mich nachmittags aus.",
+      "accepted": [
+        "我下午休息",
+        "wo3 xia4wu3 xiu1xi5",
+        "wǒ xiàwǔ xiūxi"
+      ],
+      "model": "我下午休息。",
+      "pinyin": "Wǒ xiàwǔ xiūxi.",
+      "explanation": "Die Zeitangabe steht vor der Tätigkeit."
+    }
+  },
+  {
+    "id": "lesson-013",
+    "title": "Zuhause und Gegenstände",
+    "objective": "Räume, Möbel und persönliche Dinge benennen und ihren Ort beschreiben.",
+    "canDo": "Ich kann sagen, wo ein Buch liegt.",
+    "items": [
+      "v0114",
+      "v0115",
+      "v0116",
+      "v0117",
+      "v0118",
+      "v0119",
+      "v0120",
+      "v0121",
+      "v0122",
+      "v0123",
+      "v0124"
+    ],
+    "unlockAfter": "lesson-012",
+    "check": {
+      "prompt": "Schreibe auf Chinesisch: Das Buch liegt auf dem Tisch.",
+      "accepted": [
+        "书在桌子上",
+        "書在桌子上",
+        "shu1 zai4 zhuo1zi5 shang4",
+        "shū zài zhuōzi shàng"
+      ],
+      "model": "书在桌子上。",
+      "pinyin": "Shū zài zhuōzi shàng.",
+      "explanation": "在 nennt den Ort, 上 bedeutet auf der Oberseite."
+    }
+  },
+  {
+    "id": "lesson-014",
+    "title": "Unterwegs und Orientierung",
+    "objective": "Verkehrsmittel und einfache Richtungen verwenden.",
+    "canDo": "Ich kann sagen, wo ein Geschäft liegt.",
+    "items": [
+      "v0125",
+      "v0126",
+      "v0127",
+      "v0128",
+      "v0129",
+      "v0130",
+      "v0131",
+      "v0132",
+      "v0133",
+      "v0134"
+    ],
+    "unlockAfter": "lesson-013",
+    "check": {
+      "prompt": "Schreibe auf Chinesisch: Das Geschäft ist links.",
+      "accepted": [
+        "商店在左边",
+        "商店在左邊",
+        "shang1dian4 zai4 zuo3bian5",
+        "shāngdiàn zài zuǒbian"
+      ],
+      "model": "商店在左边。",
+      "pinyin": "Shāngdiàn zài zuǒbian.",
+      "explanation": "在 verbindet den Ort mit der Richtungsangabe."
+    }
+  },
+  {
+    "id": "lesson-015",
+    "title": "Wetter und Jahreszeiten",
+    "objective": "Über Temperaturen, Niederschlag und Jahreszeiten sprechen.",
+    "canDo": "Ich kann einfach sagen, wie das Wetter heute ist.",
+    "items": [
+      "v0135",
+      "v0136",
+      "v0137",
+      "v0138",
+      "v0139",
+      "v0140",
+      "v0141",
+      "v0142",
+      "v0143",
+      "v0144",
+      "v0145",
+      "v0146",
+      "v0147",
+      "v0148",
+      "v0149"
+    ],
+    "unlockAfter": "lesson-014",
+    "check": {
+      "prompt": "Schreibe auf Chinesisch: Heute regnet es.",
+      "accepted": [
+        "今天下雨",
+        "jin1tian1 xia4yu3",
+        "jīntiān xiàyǔ"
+      ],
+      "model": "今天下雨。",
+      "pinyin": "Jīntiān xiàyǔ.",
+      "explanation": "下雨 bedeutet regnen und steht nach der Zeitangabe."
+    }
+  },
+  {
+    "id": "lesson-016",
+    "title": "Gesundheit und Gefühle",
+    "objective": "Einfache Beschwerden, Gefühle und Einschätzungen ausdrücken.",
+    "canDo": "Ich kann sagen, dass jemand krank geworden ist.",
+    "items": [
+      "v0150",
+      "v0151",
+      "v0152",
+      "v0153",
+      "v0154",
+      "v0155",
+      "v0156",
+      "v0157",
+      "v0158",
+      "v0159",
+      "v0160",
+      "v0161"
+    ],
+    "unlockAfter": "lesson-015",
+    "check": {
+      "prompt": "Schreibe auf Chinesisch: Er ist krank geworden.",
+      "accepted": [
+        "他生病了",
+        "ta1 sheng1bing4 le5",
+        "tā shēngbìng le"
+      ],
+      "model": "他生病了。",
+      "pinyin": "Tā shēngbìng le.",
+      "explanation": "Das satzschließende 了 markiert hier den neuen Zustand."
+    }
   }
 ]
