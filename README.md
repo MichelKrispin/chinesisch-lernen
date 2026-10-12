@@ -22,6 +22,7 @@ Tests benötigen lediglich Node.js:
 
 ```bash
 node tests/validate-data.mjs
+node tests/vocabulary-reference.test.mjs
 node tests/examples.test.mjs
 node tests/progress.test.mjs
 node tests/scheduler.test.mjs
@@ -60,6 +61,7 @@ Die Schreibseite speichert pro Zeichen getrennt die letzten 30 Versuche im Nachz
 
 Ein Wort erhält eine stabile ID und getrennte Angaben für Kurzübersetzung, Gebrauchshinweis, Schriftform, Pinyin, Zeichen und Beispiel.
 Neue Einträge werden gegen HanDeDict und CC-CEDICT geprüft, in kleinen Chargen ergänzt und anschließend mit `validate-data.mjs` validiert.
+Der [Prüfbericht vom 12.10.2026](docs/vocabulary-audit.md) dokumentiert den vollständigen Abgleich. `vocabulary-reference.test.mjs` prüft Schriftformen und Lesungen gegen einen daraus erstellten Referenzbestand sowie Pinyin und Strichzahlen. Deutsche Bedeutungen und Gebrauchshinweise benötigen weiterhin eine inhaltliche Prüfung.
 
 ## Inhalte beitragen
 

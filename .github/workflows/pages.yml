@@ -18,6 +18,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Lerninhalte und App prüfen
+        run: |
+          node tests/validate-data.mjs
+          node tests/vocabulary-reference.test.mjs
+          node tests/examples.test.mjs
+          node tests/progress.test.mjs
+          node tests/scheduler.test.mjs
+          node tests/writing.test.mjs
+          node tests/writing-page.test.mjs
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

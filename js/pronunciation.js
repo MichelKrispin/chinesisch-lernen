@@ -1,3 +1,22 @@
+const TONES={
+  1:{label:"1. Ton",symbol:"ā",description:"Hoch beginnen und die Tonhöhe gleichmäßig halten.",path:"M 42 22 L 156 22"},
+  2:{label:"2. Ton",symbol:"á",description:"In mittlerer Tonhöhe beginnen und nach oben gleiten.",path:"M 42 60 Q 92 46 156 22"},
+  3:{label:"3. Ton",symbol:"ǎ",description:"Tief sprechen. Allein oder am Ende einer Sprechgruppe kann die Stimme erst sinken und dann wieder steigen. Im Satz bleibt der Ton häufig tief; vor einem weiteren dritten Ton wird er steigend gesprochen.",path:"M 42 68 Q 72 94 94 84 Q 126 64 156 36"},
+  4:{label:"4. Ton",symbol:"à",description:"Hoch beginnen und die Stimme deutlich nach unten fallen lassen.",path:"M 42 22 L 156 86"},
+  5:{label:"Neutraler Ton",symbol:"a",description:"Kurz und unbetont sprechen. Die Tonhöhe hängt von der vorherigen Silbe ab; es gibt keinen festen Tonverlauf. Im nummerierten Pinyin steht dafür hier 5."}
+};
+
+export function toneDrawing(tone){
+  const info=TONES[tone];if(!info)return"";
+  const contour=info.path?`<path class="tone-contour" d="${info.path}"/>`:'<path class="tone-variable" d="M 92 28 V 80"/><circle class="tone-neutral-dot" cx="92" cy="54" r="4"/>';
+  return `<svg class="tone-drawing" viewBox="0 0 180 110" role="img" aria-label="${info.label}: ${tone===5?"kurz, Tonhöhe variabel":tone===3?"tief, einzeln fallend und steigend":tone===1?"hoch und gleichmäßig":tone===2?"steigend":"fallend"}"><path class="tone-gridlines" d="M 36 22 H 164 M 36 54 H 164 M 36 86 H 164"/><path class="tone-axes" d="M 36 14 V 90 H 164"/><text x="2" y="25">hoch</text><text x="7" y="89">tief</text>${contour}<text x="43" y="106">${tone===5?"kurz · Höhe variabel":"Silbenverlauf →"}</text></svg>`;
+}
+
+export function toneFeedback(tone){
+  const info=TONES[tone];if(!info)return"";
+  return `<div class="tone-feedback">${toneDrawing(tone)}<div><strong>Richtiger Ton: ${info.label}${tone===5?" (5)":""}</strong><p><span class="tone-symbol">${info.symbol}</span> · ${info.description}</p></div></div>`;
+}
+
 // Audio examples use Hanzi: a Mandarin speech voice would read Latin letters as letter names.
 const sample=(hanzi,pinyin,meaning)=>`<button type="button" class="sound-sample secondary" data-audio="${hanzi}" aria-label="${pinyin} anhören"><span lang="zh-Hans">${hanzi}</span><strong>${pinyin}</strong><small>${meaning}</small><span aria-hidden="true">▶</span></button>`;
 const row=(letters,description,examples)=>`<tr><th scope="row">${letters}</th><td>${description}</td><td><div class="sound-samples">${examples.map(x=>sample(...x)).join("")}</div></td></tr>`;
@@ -31,9 +50,11 @@ export function pronunciationGuide(){return `<article class="pronunciation-page"
     ${row("i nach z/c/s/zh/ch/sh/r", "Dieses i klingt nicht wie deutsches i. Die Zungenstellung des Anlauts bleibt erhalten.", [["四","sì","vier"],["吃","chī","essen"],["是","shì","sein"]])}
     </tbody></table></div></section>
   <section class="panel" id="toene"><h2>Die vier Töne und der neutrale Ton</h2><p>Der Ton gehört zur Silbe und kann die Bedeutung ändern. Die Striche über dem Vokal zeigen den Ton; bei nummeriertem Pinyin stehen 1 bis 4 beziehungsweise 5 für neutral dahinter.</p>
-    <div class="tone-grid"><div><strong>1 · mā</strong><p>hoch und gleichmäßig</p>${sample("妈","mā","Mutter")}</div><div><strong>2 · má</strong><p>steigend</p>${sample("麻","má","Hanf")}</div><div><strong>3 · mǎ</strong><p>tief, allein oft fallend und steigend</p>${sample("马","mǎ","Pferd")}</div><div><strong>4 · mà</strong><p>kurz und deutlich fallend</p>${sample("骂","mà","schimpfen")}</div><div><strong>neutral · ma</strong><p>kurz und unbetont</p>${sample("吗","ma","Fragepartikel")}</div></div>
+    <p>Die Zeichnungen zeigen die Tonhöhe im Verlauf einer Silbe: links beginnt sie, rechts endet sie. Oben bedeutet hoch, unten tief. Die Linien sind eine Orientierung, keine genaue Messung deiner Stimme.</p>
+    <div class="tone-grid">${[[1,"妈","mā","Mutter"],[2,"麻","má","Hanf"],[3,"马","mǎ","Pferd"],[4,"骂","mà","schimpfen"],[5,"吗","ma","Fragepartikel"]].map(([tone,hanzi,pinyin,meaning])=>`<div><strong>${TONES[tone].label} · ${pinyin}</strong>${toneDrawing(tone)}<p>${TONES[tone].description}</p>${sample(hanzi,pinyin,meaning)}</div>`).join("")}</div>
     <p>Im Satz verändert sich die tatsächliche Tonkurve. Vor einem weiteren dritten Ton klingt der erste dritte Ton meist steigend: <strong>nǐ hǎo</strong> wird ungefähr <strong>ní hǎo</strong> gesprochen. Die Schreibweise bleibt nǐ hǎo.</p>
-    ${sample("你好","nǐ hǎo","Hallo")}</section>
+    ${sample("你好","nǐ hǎo","Hallo")}
+    <p>Die Wortkarten zeigen bei <strong>一、 不、 个</strong> die Grundtöne <strong>yī, bù, gè</strong>. In den Beispielen stehen die gesprochenen Formen: <strong>yí ge rén</strong> (eine Person), <strong>yì nián</strong> (ein Jahr) und <strong>bú shì</strong> (nicht sein). 个 wird im Satz oft unbetont <strong>ge</strong> gesprochen.</p></section>
   <section class="panel" id="schreibregeln"><h2>Wichtige Schreibregeln</h2><ul>
     <li>Nach <strong>j, q, x</strong> und am Silbenanfang <strong>y</strong> fallen die Punkte von ü weg: <strong>qù</strong> und <strong>yú</strong> enthalten trotzdem den ü-Laut. Nach <strong>n</strong> und <strong>l</strong> bleiben die Punkte: <strong>nǚ</strong>, <strong>lǜ</strong>.</li>
     <li><strong>ui</strong> ist eine verkürzte Schreibweise von <strong>uei</strong>, <strong>iu</strong> von <strong>iou</strong>. Lies beide als eine Silbe.</li>
